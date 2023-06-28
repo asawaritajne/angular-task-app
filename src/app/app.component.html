@@ -1,0 +1,23 @@
+ <div class="search-section">
+  <div class="search-fields">
+    <div *ngFor="let field of searchFields">
+      <label>{{ field.displayName }}</label>
+       <input type="text"  (keyup.enter)="updateSearchText()" ngModel>
+    </div>
+  </div>
+  <div class="search-bar">
+    <input  type="text" ngModel >
+    <button (click)="clearSearch()">Clear</button>
+  </div>
+  <div class="result-table"> 
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Chart No</th>
+    <th>Address 1</th>
+  </tr>
+</table>
+</div>
+</div> 
+ 
